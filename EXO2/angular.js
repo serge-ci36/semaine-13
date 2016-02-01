@@ -31,7 +31,7 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
 		/* empeche une saisie nulle */
         if ($scope.dateR != "" && $scope.libelleR != "" && $scope.valeurR != "") {
 			$scope.valeurR = $scope.valeurR * 1 ;
-			$scope.recettes.push({ dateR: String($scope.dateR),libelleR: String($scope.libelleR),valeurR: $scope.valeurR }); } ;
+			$scope.recettes.push({ dateR: String($scope.dateR),libelleR: String($scope.libelleR),valeurR: $scope.valeurR }) } ;
 			
 		/* remet le champ a zero */
 		$scope.dateR = "" ;$scope.libelleR = "" ;$scope.valeurR = "" ;
@@ -71,9 +71,9 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
 
     $scope.adddepense = function() {
 		/* empeche une saisie nulle */
-        if ($scope.dateD != "" && $scope.libelleD != "" && $scope.valeurD != "") 
+        if ($scope.dateD != "" && $scope.libelleD != "" && $scope.valeurD != "") {
 			$scope.valeurD = $scope.valeurD * 1 ;
-			{$scope.depenses.push({ dateD: String($scope.dateD),libelleD: String($scope.libelleD),valeurD: $scope.valeurD, }); } ;
+			$scope.depenses.push({ dateD: String($scope.dateD),libelleD: String($scope.libelleD),valeurD: $scope.valeurD, }) } 
 			
 		/* remet le champ a zero */
 		$scope.dateD = "" ;$scope.libelleD = "" ;$scope.valeurD = "" ;
