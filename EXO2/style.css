@@ -1,0 +1,40 @@
+﻿body { font-family:Arial ; background-image:url(desktop-background.jpg) ;background-position: center; background-size:cover; height:780px ;overflow:auto ;}
+
+.TheBigOne { background-color:white ; height:auto ;box-shadow: 10px 10px 20px black;}
+
+.recette, .depense, .solde, .UlR, .UlD  {background-color:#F5F5F5 ;}
+
+.recette, .depense { margin:00px;padding:20px  ;}
+
+.operation { background-color:#F5F5F5 ; overflow:auto ;}
+
+.UlR, .UlD  { padding-left:0px ;padding-top:4px ;padding-bottom:3px ;background-color:#FFFFFF ; border:1px solid #CCCCCC ; border-radius:3px ;}
+
+.UlR:hover, .UlD:hover { border:1px solid #65AEE8 ; box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);}
+
+.main img {height:105px ; padding:20px ;}
+
+.main {font-size: 70px ; font-weight: 800;}
+
+input { width: 4em; }
+
+.F-date { width:85px ; display:inline-block ;  text-align: center; }
+
+.F-libelle { width:265px ; display:inline-block ; }
+
+.F-valeur {width:110px ; display:inline-block ;  text-align: right; padding-right:5px ;}
+
+.F-trash { display:inline-block ; width:50px ;text-align: right ; }
+
+ul { list-style:none; margin-left:0px; padding-left:0; }
+
+li { margin-bottom:10px;  width:542px ; }
+
+.fa-trash, .fa-reply {width:41px ; cursor: pointer; padding:5px ;}
+
+.autres {  background-color:#E9E9E9 ;  font-size:20px ; overflow:auto ;padding-top:10px;padding-bottom:10px;}
+
+.ecriture {font-size:30px ; color:#7C7C7C ; }
+
+.solde { text-align: right ; background-color:#E9E9E9 ; padding-top:10px ; padding-bottom:10px ; }
+

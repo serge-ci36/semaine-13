@@ -1,0 +1,29 @@
+/** Modifier la scroll barre *********************************************************/
+
+::-webkit-scrollbar { 
+	width: 12px;background-color:black; }/** couleur barre vertical interieure ****************/
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;   
+	background-color:#404040;	}/** couleur du curseur ********/
+
+/** Ajoute un bouton retour haut *********************************************************/
+
+.top{
+	background-color: #222222; /** couleur du carré **************/
+	bottom: 2em;
+	color: #fff; /** couleur de la flèche départ transition ************/
+	display: none;
+	opacity:0.6;
+	padding: 1.5em;
+	position: fixed;
+	right: 1.5em;
+	text-decoration: none; 
+	border-radius:10px ;}
+	
+.top:hover{
+	text-decoration:none ;
+	opacity:1;
+	transition:1s;
+	color: #BE2878; }/*** couleur de la flèche fin transition *******************/
+

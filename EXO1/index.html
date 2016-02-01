@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="monapp">
+
+<head>
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/shake-vertical-slow.css">
+
+	<link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+	<title>C'est lui ou pas !</title>
+
+	<video autoplay loop poster="novideo.jpg" id="bgvid" >
+		<source src="video.mp4" type="video/mp4">
+	</video>	
+	
+</head>
+
+<body ng-controller="appctrl">
+
+
+	<div id="quiestlintrus" class="container animated flip">
+	
+		<div style="display:{{carte}}" >
+		
+			<div id="question" class="container" style="background-color:{{color}}"> 
+				<center style="color:yellow"> 
+					<i class="fa fa-star-o animated infinite pulse"></i><i class="fa fa-star-o animated infinite pulse"></i><i class="fa fa-star-o animated infinite pulse"></i><i class="fa fa-star-o animated infinite pulse"></i><i class="fa fa-star-o animated infinite pulse"></i> <span class="shake-vertical-slow shake-constant">  {{formulaire.num}}  </span> <i class="fa fa-star-o animated infinite pulse"></i><i class="fa fa-star-o animated infinite pulse"></i><i class="fa fa-star-o animated infinite pulse"></i><i class="fa fa-star-o animated infinite pulse"></i><i class="fa fa-star-o animated infinite pulse"></i>
+				</center>						
+				<span>{{formulaire.propose}}</span>
+			</div>
+			
+			<form ng-submit="valider()" id="choix">
+			
+				<input type="radio" ng-model="reponse" value="choixA" class="roundedOne" name="choix1"/> {{formulaire.choixA}} <br/>
+				<input type="radio" ng-model="reponse" value="choixB" class="roundedOne" name="choix2"/> {{formulaire.choixB}} <br/>
+				<input type="radio" ng-model="reponse" value="choixC" class="roundedOne" name="choix3"/> {{formulaire.choixC}} <br/>
+				<input type="radio" ng-model="reponse" value="choixD" class="roundedOne" name="choix4"/> {{formulaire.choixD}} <br/>
+
+				<center> <input type="submit" class="btn btn-default" value="V A L I D E R" id="bouton1"> </center>
+			</form>
+					
+		</div>
+	
+		<div style="display:{{score}}" class="score">
+			<center>
+				<span class="pc">{{pourcents}} %</span>
+			</center>
+			<div style="width:352px;height:262px">
+				<center>
+					<img src="brain.png" style="width:{{brain}}%">  
+				</center>
+			</div>
+			<a ng-click="reload()" class="btn btn-default" id="bouton2">R E J O U E R</a>		
+			<a href="solutions.html"  class="btn btn-default" id="bouton3">S O  L U T I O N S</a>		
+		</div>	
+		
+	</div>
+
+<script src="main.js"></script>
+<script src="angular.min.js"></script>
+<script src="angular.js"></script>
+
+</body>
+</html>

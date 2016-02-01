@@ -1,0 +1,99 @@
+@font-face{
+    font-family: 'SHOWG';
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../fonts/SHOWG.TTF') format('truetype'); }
+
+@media screen and (max-device-width: 800px) {
+    html { background: url(novideo.jpg) #000 no-repeat center center fixed ;  }
+    #bgvid { display: none ; }
+	.container {width:100%; margin-left:0px ; margin-right:0px ; }
+}
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(novideo.jpg) no-repeat;
+    background-size: cover; }
+
+video#bgvid { transition: 1s opacity ; }
+.stopfade { opacity: .5; }
+/****************************************************************************************************************************************/
+
+body { 
+	background-image:url(novideo.jpg)  ;
+	background-position: center; 
+    background-size:cover;
+	overflow-y:hidden; overflow-x:hidden;}
+
+#quiestlintrus {
+	position:absolute ;
+	overflow:auto;
+
+	left:40px ;right:40px ;
+	top:40px ;
+	bottom:40px ;
+	background:white ;
+	border-radius:20px ;
+	box-shadow: 10px 10px 20px black;
+}
+
+#question {
+	overflow:auto;
+	width:100% ;
+	height:100% ;
+	background:red ;
+	margin-top:10px ;
+	-webkit-border-top-left-radius: 20px;
+	-webkit-border-top-right-radius: 20px;
+	-moz-border-radius-topleft: 20px;
+	-moz-border-radius-topright: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	font-family: 'SHOWG';
+	font-size:3em ;
+	text-align:justify ;	
+}
+
+#question i {color:yellow ;}
+
+#choix {
+	overflow:auto;
+	padding:15px ;
+	font-family: Arial;
+	font-size:2.5em ;
+}
+.radio {height:34px; padding:10px; float:left ;}
+
+#bouton, #bouton2 { 
+	position:absolute ;
+	left:40px ;right:40px ;
+	bottom:40px ;
+	padding:10px ;
+	width:90% ;
+	box-shadow: 10px 10px 10px black;
+	font-family: 'SHOWG';
+	font-size:30px ; }
+
+.roundedOne {
+	width: 50px;
+	height: 50px;
+	background: #fcfff4;}
+	
+.score {
+	margin-top:0px ;
+	font-family: 'SHOWG';
+	font-size:2.2em ;
+	text-align:justify ;}
+	
+.score .pc {font-size:4em ;}

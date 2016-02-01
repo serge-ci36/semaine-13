@@ -1,0 +1,124 @@
+@font-face{
+    font-family: 'SHOWG';
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('../fonts/SHOWG.TTF') format('truetype'); }
+
+@media screen and (max-device-width: 800px) {
+    html { background: url(../novideo.jpg) #000 no-repeat center center fixed ;  }
+    #bgvid { display: none ; }
+	.container {width:100%; margin-left:0px ; margin-right:0px ; }
+}
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(novideo.jpg) no-repeat;
+    background-size: cover; }
+
+video#bgvid { transition: 1s opacity ; }
+.stopfade { opacity: .5; }
+/****************************************************************************************************************************************/
+
+body { background-color:black ;overflow-y:hidden; overflow-x:hidden;}
+
+#quiestlintrus {
+	margin:auto ;
+	margin-top:90px ;
+	width:380px ;
+	height:550px ;
+	background-color:white ;
+	border-radius:20px ;
+	box-shadow: 10px 10px 20px black;
+}
+
+#question  {
+	width:380px ;
+	height:230px ;
+	background-color:red ;
+	margin-left:-15px ;
+	-webkit-border-top-left-radius: 20px;
+	-webkit-border-top-right-radius: 20px;
+	-moz-border-radius-topleft: 20px;
+	-moz-border-radius-topright: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	font-family: 'SHOWG';
+	font-size:2.3em ;
+	text-align:justify ;	
+}
+
+#question i,#solutions i {color:yellow ;}
+
+#choix {
+	padding:15px ;
+	font-family: Arial;
+	font-size:2.5em ;
+}
+.radio {height:34px; padding:10px; float:left ;}
+
+#bouton1, #bouton2, #bouton3, #bouton4 { 
+	margin-top:15px ;
+	padding:10px ;
+	box-shadow: 10px 10px 10px black;
+	font-family: 'SHOWG';
+	font-size:30px ; }
+
+#bouton1 { width:98% ;}
+#bouton2, #bouton3 { width:49% ; font-size:20px ; margin-top:36px ;}	
+	
+.roundedOne {
+	width: 28px;
+	height: 28px;
+	background: #fcfff4;}
+	
+.score {
+	margin-top:0px ;
+	font-family: 'SHOWG';
+	font-size:2.2em ;
+	text-align:justify ;}
+	
+.score .pc {font-size:4em ;}
+
+
+#solutions {
+	position:absolute ;
+	overflow:auto;
+	left:20px ;right:20px ;
+	top:20px ;
+	bottom:20px ;
+	background-color:white ;
+	color:black ;
+	border-radius:20px ;
+	box-shadow: 10px 10px 20px black;
+}
+
+.solutions  {
+	width:100% ;
+	height:46px ;
+	background-color:red ;
+	-webkit-border-top-left-radius: 20px;
+	-webkit-border-top-right-radius: 20px;
+	-moz-border-radius-topleft: 20px;
+	-moz-border-radius-topright: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	font-family: 'SHOWG';
+	font-size:2.3em ;
+	text-align:justify ;	
+}
+
+.reponses { 
+	padding:15px ;
+	font-size:20px ; 
+}

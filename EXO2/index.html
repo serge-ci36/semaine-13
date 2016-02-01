@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="animate.min.css">
+	<link rel="stylesheet" href="shake-vertical-slow.css">
+
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="scroll.css">
+	<link rel="shortcut icon" type="image/png" href="euro.png" />
+
+	<title>Tenu de compte</title>
+	 
+</head>
+
+<body class="animated fadeIn">
+
+<div class="TheBigOne container">
+  <div ng-app="app">
+   <div ng-controller="appCtrl">
+	
+	<div class="row">
+	
+		<div class="main">
+			<img src="euro.png" class="logo"/><span  class="logo"><u style="color:#FE000B"><i style="color:#7C7C7C">CAISSE DES PAUVRES</i></u></span>
+		</div>
+		
+		<div class="autres">
+		
+		<div class="col-md-6 ecriture">R E C E T T E S</div><div class="col-md-6 ecriture">D E P E N S E S</div>
+		
+		</div>
+		
+		<div class="operation">
+		
+		<div id="recette" class="recette col-md-6 animated fadeIn">
+			<input ng-model="dateR" placeholder=" Date" class="F-date form-control" style="text-align: left"/>
+			<input ng-model="libelleR" placeholder=" Libelle" class="F-libelle form-control"/>
+			<input ng-model="valeurR" placeholder=" Valeur"class="F-valeur form-control" style="text-align: left" />
+			<button ng-click="addRecette()" class="btn btn-default">Ajouter</button><br/><br/>
+			<ul>
+				<div class="F-date"><strong>Date</strong></div>	
+				<div class="F-libelle"><strong>Libellé de l'opération</strong></div> 
+				<div class="F-valeur"><strong>Montant</strong></div> 
+				<div class="F-trash"><strong>Supprimer</strong></div> 
+				
+				<li ng-repeat="recette in recettes"  class="UlR">
+					<div class="F-date">{{ recette.dateR }}</div>
+					<div class="F-libelle">{{ recette.libelleR }}</div>
+					<div class="F-valeur">{{ recette.valeurR | number :2 }}</div> 
+					<div class="F-trash fa-1x fa fa-trash" ng-click="rmRecette($index)"></div>
+				</li>
+			</ul>
+		</div>	
+			 
+		<div id="depense" class="depense col-md-6 animated fadeIn">
+			<input ng-model="dateD" placeholder=" Date" class="F-date form-control" style="text-align: left"/>
+			<input ng-model="libelleD" placeholder=" Libelle" class="F-libelle form-control"/>
+			<input ng-model="valeurD" placeholder=" Valeur" class="F-valeur form-control" style="text-align: left"/>
+			
+			<button ng-click="adddepense()" class="btn btn-default">Ajouter</button> <br/><br/>
+			<ul>
+				<div class="F-date"><strong>Date</strong></div>	
+				<div class="F-libelle"><strong>Libellé de l'opération</strong></div> 
+				<div class="F-valeur"><strong>Montant</strong></div> 
+				<div class="F-trash"><strong>Supprimer</strong></div> 
+				
+				<li ng-repeat="depense in depenses" class="UlD">
+					<div class="F-date">{{ depense.dateD }}</div>
+					<div class="F-libelle">{{ depense.libelleD }}</div>
+					<div class="F-valeur">{{ depense.valeurD | number :2 }}</div>
+					<div class="F-trash fa-1x fa fa-trash" ng-click="rmDepense($index)"></div>
+				</li>
+			</ul>
+		</div>
+		
+		</div>
+		
+		<div class="col-md-12 solde">
+			
+			<div class="col-md-6">
+				<strong style="padding-right:73px">Total des recettes : {{ totalR | number :2 }} €</strong>
+			</div>
+			<div class="col-md-6">
+				<strong style="padding-right:57px">Total des dépenses : {{ totalD  | number :2 }} €</strong>
+			</div>
+			<br/><br/>
+			<span style="padding-right:72px;">Ancien solde : {{ solde | number :2 }} €</span><br/>
+			<strong style="padding-right:72px;">Nouveau solde : {{ newsolde | number :2 }} €</strong><br/>
+		</div>
+		
+	</div>		
+	
+		<ul class="recette col-md-6" style="color:grey">
+			{{ siReff }}
+			<li ng-repeat="effrecette in effrecettes"  class="UlR">
+				<div class="F-date">{{ effrecette.dateR }}</div>
+				<div class="F-libelle">{{ effrecette.libelleR }}</div>
+				<div class="F-valeur">{{ effrecette.valeurR | number :2 }}</div> 
+				<div class="F-trash fa-1x fa fa-reply" ng-click="rlRecette($index)"></div>
+			</li>
+		</ul>
+
+		<ul class="depense col-md-6" style="color:grey">
+			{{ siDeff }}
+			<li ng-repeat="effdepense in effdepenses"  class="UlD">
+				<div class="F-date">{{ effdepense.dateD }}</div>
+				<div class="F-libelle">{{ effdepense.libelleD }}</div>
+				<div class="F-valeur">{{ effdepense.valeurD | number :2 }}</div> 
+				<div class="F-trash fa-1x fa fa-reply" ng-click="rlDepense($index)"></div>
+			</li>
+		</ul>
+
+	<br/><br/><br/><br/><br/><br/>
+
+   </div>
+  </div>
+<div>
+
+<script src="main.js"></script>
+<script src="angular.min.js"></script>
+<script src="angular.js"></script>
+
+</body>
+</html>
